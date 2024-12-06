@@ -1,6 +1,6 @@
 import torch
 from PIL import Image
-from NoiseAddition import GaussianNoise
+from noise_addition import GaussianNoise
 
 def cal_energy_score(latent):
     #x.shape = (bsize, score)

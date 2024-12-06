@@ -1,5 +1,4 @@
 import torch
-from PIL import Image
 from utils.noise_addition import GaussianNoise
 
 def cal_energy_score(latent):

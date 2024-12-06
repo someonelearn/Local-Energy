@@ -3,6 +3,7 @@ from datasets import load_dataset
 from tqdm.auto import tqdm
 import numpy as np
 from datasets import Dataset
+from PIL import Image
 import io
 
 class GaussianNoise:

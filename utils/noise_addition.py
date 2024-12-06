@@ -22,7 +22,7 @@ class GaussianNoise:
     #convert a PIL Image to noisy PIL Image
     img_arr = np.array(image)
 
-    noise = np.random.normal(mean, std, img_arr.shape).astype(np.int16)
+    noise = np.random.normal(self.mean, self.std, img_arr.shape).astype(np.int16)
     noised_img_arr = img_arr +  noise
     noised_img_arr = np.clip(noised_img_arr, 0, 255).astype(np.uint8)
 

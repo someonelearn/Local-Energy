@@ -18,7 +18,7 @@ class GaussianNoise:
     png_image = Image.open(buffer)
     return png_image
 
-  def add_noise(self, img_arr):
+  def add_noise(self, image):
     #convert a PIL Image to noisy PIL Image
     img_arr = np.array(image)
 
@@ -32,9 +32,9 @@ class GaussianNoise:
 
   def add_noise_data(self, dataset):
     gaussian_ds = []
-    for c in tqdm(range(num_of_noised_imgs)):
+    for c in tqdm(range(n_noised_img)):
             gaussian_ds.append({
-                "image" : transform_type(gaussian_noised_img(img, 0, std_list[i])),
+                "image" : transform_type(self.add_noise(img)),
                 "label" : label
             })
     return Dataset.from_list(gaussian_ds)

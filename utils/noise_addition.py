@@ -32,7 +32,7 @@ class GaussianNoise:
 
   def add_noise_data(self, dataset):
     gaussian_ds = []
-    for c in tqdm(range(n_noised_img)):
+    for c in tqdm(range(self.n_noised_img)):
             gaussian_ds.append({
                 "image" : transform_type(self.add_noise(img)),
                 "label" : label
